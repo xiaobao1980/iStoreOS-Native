@@ -199,7 +199,7 @@ jobs:
           ${{ env.FIRMWARE }}/*jp-tvbox-squashfs-sysupgrade.img.gz
 
     - name: 删除运行记录
-      uses: Mattraks/delete-workflow-runs@main
+      uses: xiaobao1980/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 1
