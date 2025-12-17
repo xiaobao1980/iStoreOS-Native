@@ -212,6 +212,20 @@ define U-Boot/rk3568/Default
   TPL:=rk3568_ddr_1560MHz_v1.21.bin
 endef
 
+define U-Boot/lubancat-2n-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=LubanCat-2N
+  BUILD_DEVICES:= \
+    embedfire_lubancat-2n
+endef
+
+define U-Boot/roceos-K50S
+  $(U-Boot/rk3568/Default)
+  NAME:=roceos K50S
+  BUILD_DEVICES:= \
+    roceos-K50S
+endef
+
 define U-Boot/easepi-rk3568
   $(U-Boot/rk3568/Default)
   NAME:=Easepi RK3568
