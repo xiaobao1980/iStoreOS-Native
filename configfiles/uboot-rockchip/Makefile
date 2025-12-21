@@ -387,6 +387,7 @@ UBOOT_TARGETS := \
   easepi-rk3568 \
   easepi-rk3568-rk809 \
   bpi-r2-pro-rk3568 \
+  lubancat-2n-rk3568 \
   nanopi-r5c-rk3568 \
   nanopi-r5s-rk3568 \
   radxa-e25-rk3568 \
