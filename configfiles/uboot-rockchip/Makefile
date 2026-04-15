@@ -7,7 +7,7 @@ include $(INCLUDE_DIR)/kernel.mk
 
 PKG_VERSION:=2024.10
 PKG_RELEASE:=7
-PKG_HASH:=skip
+PKG_HASH:=b28daf4ac17e43156363078bf510297584137f6df50fced9b12df34f61a92fb0
 
 PKG_MAINTAINER:=Sarah Maedel <openwrt@tbspace.de>
 
@@ -172,6 +172,13 @@ define U-Boot/rk3566/Default
   DEPENDS:=+PACKAGE_u-boot-$(1):trusted-firmware-a-rk3566
   ATF:=rk3568_bl31_v1.44.elf
   TPL:=rk3566_ddr_1056MHz_v1.21.bin
+endef
+
+define U-Boot/station-m2-rk3566
+  $(U-Boot/rk3566/Default)
+  NAME:=Station M2
+  BUILD_DEVICES:= \
+    firefly_station-m2
 endef
 
 define U-Boot/nanopi-r3s-rk3566
@@ -384,6 +391,7 @@ UBOOT_TARGETS := \
   radxa-cm3-io-rk3566 \
   radxa-zero-3-rk3566 \
   rock-3c-rk3566 \
+  station-m2-rk3566 \
   easepi-rk3568 \
   easepi-rk3568-rk809 \
   bpi-r2-pro-rk3568 \

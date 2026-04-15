@@ -1,6 +1,6 @@
 <div align="center">
   <img src="./configfiles/screenshot/istoreos.png" style="max-width: 100%; height: auto;" />
-  <h1>基于官方源码编译的iStoreOS固件</h1>
+  <h1>✨ 基于官方源码编译的iStoreOS固件 ✨</h1>
 
   <img src="https://img.shields.io/github/downloads/Kwonelee/iStoreOS-Native/total.svg?style=for-the-badge&color=32C955"/>
   <img src="https://img.shields.io/github/stars/Kwonelee/iStoreOS-Native.svg?style=for-the-badge&color=orange"/>
@@ -19,22 +19,27 @@
 ---
 
 ## 🤔 项目介绍 [![](https://img.shields.io/badge/-项目介绍-FFFFFF.svg)](#-项目介绍-)
-**iStoreOS** 目标是提供一个人人会用的路由兼轻 **NAS 系统** ，不管是作为路由还是 NAS，你都有相似的操作体验。
+**iStoreOS** 目标是提供一个人人会用的路由兼轻 **NAS 系统** ，不管是作为路由还是 NAS，你都有相似的操作体验
 
 > [!TIP]
-> 📢本项目提供了 **一个将第三方 RK 设备适配到 iStoreOS 官方系统的参考实现** ，支持通过源码编译生成 **`sysupgrade`** 格式固件。该格式支持手动在线刷写升级， **一次适配，持续更新** ，无需重复刷写完整系统
+> 📢本项目提供了一个 **将第三方 rockchip 设备适配至 iStoreOS 官方源码** 的参考实现，支持通过源码编译生成 **`sysupgrade`** 格式固件。该格式可手动在线刷写升级， **一次适配，持续更新** ，告别重复刷机
 > 
 > 😂如果您在适配其他 RK 机型时遇到困难，欢迎您直接使用右侧项目😂👉👉👉[iStoreOS-Actions](https://github.com/Kwonelee/iStoreOS-Actions)
 > 
 > 使用此仓库必须设置机密token，Actions云编译固件时需要用到，通常在仓库设置里面。机密键名为 **`GH_TOKEN`**（严禁在仓库可视代码中填写，否则后果自负）
 
+---
+
 ## 😅 第三方插件 [![](https://img.shields.io/badge/-第三方插件-FFFFFF.svg)](#-第三方插件-)
-| 插件                     |  状态   | 源码地址                                                                  | 备注         |
-|:------------------------:|:------:| ------------------------------------------------------------------------- | ------------ |
-| ramfree释放内存           |  ✅   | [sbwml/openwrt_pkgs](https://github.com/sbwml/openwrt_pkgs)               | 🟢 已测试    |
-| FileBrowser文件浏览器     |  ✅   | [sbwml/openwrt_pkgs](https://github.com/sbwml/openwrt_pkgs)               | 🟢 已测试    |
-| adguardhome              |  ✅   | [w9315273/adguardhome](https://github.com/w9315273/luci-app-adguardhome) ; [sirpdboy/adguardhome](https://github.com/sirpdboy/luci-app-adguardhome) | 🟢 已测试     |
-| 其他                     |  ⏳   |                                                                           |               |
+| 插件                     |  状态   | 源码地址                                                                    | 备注         |
+|:------------------------:|:------:| ---------------------------------------------------------------------------- | ------------ |
+| luci-app-ramfree         |  ✅   | [Kwonelee/openwrt-packages](https://github.com/Kwonelee/openwrt-packages)    | 🟢 已测试    |
+| luci-app-filebrowser-go  |  ✅   | [Kwonelee/openwrt-packages](https://github.com/Kwonelee/openwrt-packages)    | 🟢 已测试    |
+| luci-app-adguardhome     |  ✅   | [w9315273/adguardhome](https://github.com/w9315273/luci-app-adguardhome)     | 🟢 已测试     |
+| luci-app-openlist2       |  ✅   | [sbwml/luci-app-openlist2](https://github.com/sbwml/luci-app-openlist2)      | 🟢 已测试     |
+| luci-app-lucky           |  ✅   | [gdy666/luci-app-lucky](https://github.com/gdy666/luci-app-lucky)            | 🟢 已测试     |
+| luci-app-zerotier        |  ✅   | [sbwml/openwrt_pkgs](https://github.com/sbwml/openwrt_pkgs)                  | 🟢 已测试     |
+| 其他                     |  ⏳   |                                                                               |               |
 
 ✅ 支持 - ⏳ 计划中 - ⭕ 不支持
 
@@ -47,8 +52,12 @@
 
 ✅ 支持 - ⏳ 计划中 - ⭕ 不支持
 
+---
+
 ## 🤗 项目截图 [![](https://img.shields.io/badge/-项目截图-FFFFFF.svg)](#-项目截图-)
 ![screenshots](./configfiles/screenshot/screenshot2.png)
+
+---
 
 # 🌟 Star戳一戳，好运加满！😆
 > **"点过 `Star` 的朋友，颜值与智慧双双在线！✨"**
