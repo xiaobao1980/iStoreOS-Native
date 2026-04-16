@@ -152,10 +152,20 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
-        cd openwrt/bin/targets/*/*
+        # 方法1：使用 find 定位目标目录
+        TARGET_DIR=$(find openwrt/bin/targets -mindepth 2 -maxdepth 2 -type d | head -1)
+        
+        if [ -z "$TARGET_DIR" ]; then
+          echo "错误：未找到固件输出目录"
+          ls -la openwrt/bin/ 2>/dev/null || echo "bin 目录不存在"
+          exit 1
+        fi
+        
+        cd "$TARGET_DIR"
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "status=success" >> ${GITHUB_OUTPUT}
+        echo "找到固件目录: $PWD"
 
     - name: 上传固件目录
       uses: actions/upload-artifact@main
