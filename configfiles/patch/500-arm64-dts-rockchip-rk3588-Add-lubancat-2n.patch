@@ -1,0 +1,7 @@
+--- linux-6.6.127/arch/arm64/boot/dts/rockchip/Makefile.bak	2026-04-17 11:51:19.971625090 +0800
++++ linux-6.6.127/arch/arm64/boot/dts/rockchip/Makefile	2026-04-17 11:52:16.259622782 +0800
+@@ -115,3 +115,4 @@
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-nanopi-r6s.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-nanopi-r6c.dtb
+ dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3588s-rock-5a.dtb
++dtb-$(CONFIG_ARCH_ROCKCHIP) += rk3568-lubancat-2n.dtb
