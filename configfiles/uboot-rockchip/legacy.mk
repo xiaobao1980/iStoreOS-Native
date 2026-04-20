@@ -77,12 +77,14 @@ $(call Device/Legacy/rk3568,$(1))
   DEVICE_DTS = rk3568/$$(SOC)-$(lastword $(subst _, ,$(1)))
 endef
 
-define U-Boot/lubancat-2n-rk3568
-  $(U-Boot/rk3568/Default)
-  NAME:=LubanCat-2N
-  BUILD_DEVICES:= \
-    embedfire_lubancat-2n
+define Device/embedfire_lubancat-2n
+  $(call Device/Legacy/rk3568,$(1))
+  DEVICE_VENDOR := embedfire
+  DEVICE_MODEL := LubanCat-2N
+  DEVICE_DTS := rk3568/rk3568-lubancat-2n
+  DEVICE_PACKAGES += kmod-r8169 kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal
 endef
+TARGET_DEVICES += embedfire_lubancat-2n
 
 define Device/easepi_r1
 $(call Device/Legacy/rk3568,$(1))
