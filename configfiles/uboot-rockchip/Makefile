@@ -231,6 +231,13 @@ define U-Boot/easepi-rk3568-rk809
   DEFAULT:=y
 endef
 
+define U-Boot/lubancat-2n-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=LubanCat-2N
+  BUILD_DEVICES:= \
+    embedfire_lubancat-2n
+endef
+
 define U-Boot/bpi-r2-pro-rk3568
   $(U-Boot/rk3568/Default)
   NAME:=Bananapi-R2 Pro
@@ -380,6 +387,7 @@ UBOOT_TARGETS := \
   station-m2-rk3566 \
   easepi-rk3568 \
   easepi-rk3568-rk809 \
+  lubancat-2n-rk3568 \
   bpi-r2-pro-rk3568 \
   nanopi-r5c-rk3568 \
   nanopi-r5s-rk3568 \
