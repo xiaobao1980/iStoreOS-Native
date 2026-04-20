@@ -77,6 +77,13 @@ $(call Device/Legacy/rk3568,$(1))
   DEVICE_DTS = rk3568/$$(SOC)-$(lastword $(subst _, ,$(1)))
 endef
 
+define U-Boot/lubancat-2n-rk3568
+  $(U-Boot/rk3568/Default)
+  NAME:=LubanCat-2N
+  BUILD_DEVICES:= \
+    embedfire_lubancat-2n
+endef
+
 define Device/easepi_r1
 $(call Device/Legacy/rk3568,$(1))
   DEVICE_VENDOR := EasePi
