@@ -78,11 +78,11 @@ $(call Device/Legacy/rk3568,$(1))
 endef
 
 define Device/embedfire_lubancat-2n
-  $(call Device/Legacy/rk3568,$(1))
-  DEVICE_VENDOR := embedfire
+  DEVICE_VENDOR := EmbedFire
   DEVICE_MODEL := LubanCat-2N
+  SOC := rk3568
   DEVICE_DTS := rk3568/rk3568-lubancat-2n
-  DEVICE_PACKAGES += kmod-r8169 kmod-ata-ahci-dwc kmod-hwmon-pwmfan kmod-thermal
+  DEVICE_PACKAGES := kmod-r8125 -urngd kmod-ata-ahci
 endef
 TARGET_DEVICES += embedfire_lubancat-2n
 
