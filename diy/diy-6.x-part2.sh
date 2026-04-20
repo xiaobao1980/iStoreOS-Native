@@ -62,7 +62,7 @@ cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568/rk3566-jp-tvbox.dts target/linux/
 cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568/rk3568-lubancat-2n.dts target/linux/rockchip/dts/rk3568/
 
 # 添加dtb补丁到target/linux/rockchip/patches-6.6
-cp -f $GITHUB_WORKSPACE/configfiles/patch/500-arm64-dts-rockchip-rk3588-Add-lubancat-2n.patch target/linux/rockchip/patches-6.6/
+cp -f $GITHUB_WORKSPACE/configfiles/patch/800-add-rk3588-lubancat-2n-dtb-to-makefile.patch target/linux/rockchip/patches-6.6/
 # ============================================================================================================
 # RK35xx示例结束
 # ============================================================================================================
