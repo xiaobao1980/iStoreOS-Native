@@ -50,7 +50,7 @@ TARGET_DEVICES += embedfire_lubancat-2n" >> target/linux/rockchip/image/armv8.mk
 cp -f $GITHUB_WORKSPACE/configfiles/uboot-rockchip/legacy.mk target/linux/rockchip/image/legacy.mk
 
 # 复制dts与配置文件到package/boot/uboot-rockchip
-cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568/rk3568-lubancat-2n.dts package/boot/uboot-rockchip/src/arch/arm/dts/
+cp -f $GITHUB_WORKSPACE/configfiles/uboot-rockchip/rk3568/rk3568-lubancat-2n.dts package/boot/uboot-rockchip/src/arch/arm/dts/
 cp -f $GITHUB_WORKSPACE/configfiles/uboot-rockchip/rk3568-lubancat-2n-u-boot.dtsi package/boot/uboot-rockchip/src/arch/arm/dts/
 cp -f $GITHUB_WORKSPACE/configfiles/uboot-rockchip/lubancat-2n-rk3568_defconfig package/boot/uboot-rockchip/src/configs/
 cp -f $GITHUB_WORKSPACE/configfiles/dts/rk3568/rk3566-roc-pc.dts package/boot/uboot-rockchip/src/arch/arm/dts/
